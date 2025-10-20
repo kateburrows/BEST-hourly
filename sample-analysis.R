@@ -18,10 +18,10 @@ library(ggplot2)
 # - strata: matching strata for case-crossover design
 # - rh_max: daily maximum relative humidity (for sensitivity analysis)
 
-df_sample <- readRDS("df_sample.rds")
+df <- readRDS("df_sample.rds")
 
 # Create temperature matrix (24 hourly temperatures)
-temp_matrix <- as.matrix(df_sample[, paste0("temp_C.", 0:23)])
+temp_matrix <- as.matrix(df[, paste0("temp_C.", 0:23)])
 
 # ============================================================================
 # FIGURE 1: Cumulative (0-24 hour) Exposure-Response Curve
